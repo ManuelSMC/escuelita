@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Escuela - Monolito</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__content">
+        <h1>Escuela Monolitica</h1>
+        <p>Registro y reinscripcion de alumnos en un solo proyecto.</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>Registrar alumno</h2>
+        <form id="form-registrar" class="form">
+          <label>
+            Nombre
+            <input type="text" name="nombre" required />
+          </label>
+          <label>
+            Matricula
+            <input type="text" name="matricula" required />
+          </label>
+          <label>
+            Promedio
+            <input type="number" name="promedio" step="0.1" min="0" max="10" />
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="tieneAdeudo" />
+            Tiene adeudo
+          </label>
+          <button type="submit">Registrar</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <h2>Reinscribir alumno</h2>
+        <form id="form-reinscribir" class="form">
+          <label>
+            Id alumno
+            <input type="number" name="id" required />
+          </label>
+          <button type="submit">Reinscribir</button>
+        </form>
+      </section>
+
+      <section class="card card--wide">
+        <div class="card__header">
+          <h2>Alumnos registrados</h2>
+          <button id="btn-refrescar" class="secondary">Refrescar</button>
+        </div>
+        <div id="alumnos" class="table"></div>
+      </section>
+    </main>
+
+    <div id="toast" class="toast" hidden></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

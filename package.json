@@ -1,0 +1,12 @@
+{
+  "name": "escuela2-monolito",
+  "version": "1.0.0",
+  "description": "Sistema web monolitico sencillo para alumnos",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
