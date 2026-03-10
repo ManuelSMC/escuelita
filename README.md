@@ -1,4 +1,4 @@
-# Sistema web monolitico de alumnos
+# Sistema web monolitico de alumnos -
 
 Proyecto sencillo cliente-servidor en un solo repo. Todo corre en un solo proceso Node.js y sirve el frontend desde el mismo servidor.
 
