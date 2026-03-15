@@ -36,9 +36,13 @@ jobs:
       - name: Instalar dependencias de la app
         run: npm install
       - name: Iniciar app en background
-        run: node src/server.js &
+        run: |
+          node src/server.js &
+          echo $! > app.pid
       - name: Esperar que la app inicie
-        run: sleep 5
+        run: |
+          sleep 8
+          curl --retry 5 --retry-delay 2 --retry-connrefused http://localhost:3000/api/alumnos
       - name: Ejecutar pruebas K6
         uses: grafana/k6-action@v0.3.1
         with:
